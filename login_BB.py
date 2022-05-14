@@ -10,7 +10,7 @@ driver = webdriver.Chrome('C:\Chrome_Driver\chromedriver.exe')
 url = "https://ecampus.chungbuk.ac.kr/"
 driver.get(url)
 
-#아이디와 비밀번호 입력(0.5초씩 기다리기) - 너무 빠르면 대형 사이트는 트래픽 공격으로 인
+#아이디와 비밀번호 입력(0.5초씩 기다리기) - 너무 빠르면 대형 사이트는 트래픽 공격으로 인식
 print('user_id : ')
 user_id = input()
 sleep(0.5)
