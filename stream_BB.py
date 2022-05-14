@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup as bs
 #크롬 웹 드라이버 경로
 driver = webdriver.Chrome('C:\Chrome_Driver\chromedriver.exe')
 
-#크롬으로 네이버 로그인 화면 접속
+#크롬으로 블랙보드 로그인 화면 접속
 url = "https://ecampus.chungbuk.ac.kr/"
 driver.get(url)
 
