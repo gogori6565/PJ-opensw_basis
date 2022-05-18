@@ -1,3 +1,5 @@
+##활동스트림에서 코스이름, 타이틀 내용 -> 제공예정/오늘/최근항목 으로 구분해서 가져오기 수행##
+
 #현재 3.14.1 selenium 버전 사용중
 from selenium import webdriver
 #타임 객체 선언
@@ -82,5 +84,3 @@ print("\n")
 for i in range(10):
     print(pre_cours[i])
     print(pre_title[i])
-    
-##활동스트림 코스이름, 타이틀 내용 -> 제공예정/오늘/최근항목 으로 구분해서 가져오기 수행##
