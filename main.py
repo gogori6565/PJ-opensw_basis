@@ -64,6 +64,17 @@ td_title=soup.select('.js-todayStreamEntries.activity-group.columns.main-column>
 pre_cours=soup.select('.js-previousStreamEntries.activity-group.columns.main-column>ul.activity-feed>li>div>div>div>div>div>a')
 pre_title=soup.select('.js-previousStreamEntries.activity-group.columns.main-column>ul.activity-feed>li>div>div>div>div>div.name>ng-switch>a')
 
+#문자열만 추출 - len() : 리스트 크기
+for i in range(0,len(upc_cours)):
+    upc_cours[i]=upc_cours[i].text
+    upc_title[i]=upc_title[i].text
+for i in range(0,len(td_cours)):
+    td_cours[i]=td_cours[i].text
+    td_title[i]=td_title[i].text
+for i in range(0,10):
+    pre_cours[i]=pre_cours[i].text
+    pre_title[i]=pre_title[i].text
+
 ##카테고리 구분##
 category=soup.select('svg[class="MuiSvgIconroot-0-2-37 makeStylesdirectionalIcon-0-2-36 makeStylesstrokeIcon-0-2-35 MuiSvgIconcolorPrimary-0-2-38 MuiSvgIconfontSizeLarge-0-2-45"]')
 
@@ -82,6 +93,3 @@ for i in range(0,len(myScore)):
     
 for i in range(0,len(myScore)):
     score.append(myScore[i]+max_score[i])
-
-for i in range(0,len(myScore)):
-    print(score[i])
