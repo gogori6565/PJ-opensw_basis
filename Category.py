@@ -1,5 +1,8 @@
 ## 과제/공지사항/성적/강의자료 카테고리 분류하기 - 속성값 이용##
 
+##전역변수 선언##
+category_index=0 #속성값 추출할 때 사용할 category의 index
+
 #●처음~soup = bs(response, 'html.parser')까지 코드 생략●#
 
 ##제공예정##
