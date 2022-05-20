@@ -1,6 +1,4 @@
-## 과제/공지사항/성적/강의자료 카테고리 분류하기 - 속성값 이용##
-
-##활동스트림에서 코스이름, 타이틀 내용 -> 제공예정/오늘/최근항목 으로 구분해서 가져오기 수행##
+##전체 소스코드##
 
 #현재 3.14.1 selenium 버전 사용중
 from selenium import webdriver
@@ -8,6 +6,11 @@ from selenium import webdriver
 from time import sleep
 import requests
 from bs4 import BeautifulSoup as bs
+
+#Webdrive쓰기 위해 import
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 ##전역변수 선언##
 login_stop=1 #로그인 예외처리 변수
@@ -47,7 +50,7 @@ while(login_stop):
         pass
 
 #활동스트림 내용 담은 element 가져오기
-sleep(8)
+WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="activity-stream"]/div[2]'))) #최근항목 구분div xpath
 response=driver.find_element_by_xpath('//*[@id="body-content"]').get_attribute('innerHTML')
 
 soup = bs(response, 'html.parser')
