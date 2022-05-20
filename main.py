@@ -93,3 +93,5 @@ for i in range(0,len(myScore)):
     
 for i in range(0,len(myScore)):
     score.append(myScore[i]+max_score[i])
+
+print(category)
