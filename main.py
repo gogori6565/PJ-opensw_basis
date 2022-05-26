@@ -74,7 +74,7 @@ for i in range(0,len(upc_cours)):
 for i in range(0,len(td_cours)):
     td_cours[i]=td_cours[i].text
     td_title[i]=td_title[i].text
-for i in range(0,10):
+for i in range(0,len(pre_cours)):
     pre_cours[i]=pre_cours[i].text
     pre_title[i]=pre_title[i].text
 
