@@ -108,13 +108,13 @@ for icon in category:
 
 ##성적##
 my_score=soup.select('span[class="grade-input-display ready"]')
-max_score=soup.select('span[class="points-text"]')
+max_score=soup.select('span[class="points-text"]>bdi')
 
 change_text(my_score)
 change_text(max_score)
     
 for i in range(0,len(my_score)):
-    score.append(my_score[i]+max_score[i])
+    score.append(my_score[i]+"/"+max_score[i])
 
 #마감예정과제 마감기한 가져오기
 deadline=soup.select('.content>span>bb-translate>bdi')
