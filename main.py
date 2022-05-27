@@ -67,12 +67,12 @@ while(login_stop):
         print('user_id : ')
         user_id = input()
         sleep(0.5)
-        driver.find_element_by_name('uid').send_keys('2021041075')
+        driver.find_element_by_name('uid').send_keys(user_id)
 
         print('user_pw : ')
         user_pw = input()
         sleep(0.5)
-        driver.find_element_by_name('pswd').send_keys('jh041075!')
+        driver.find_element_by_name('pswd').send_keys(user_pw)
 
         #Xpath
         driver.find_element_by_xpath('//*[@id="entry-login"]').click()
@@ -121,3 +121,5 @@ deadline=soup.select('.content>span>bb-translate>bdi')
 
 ##GUI카테고리 리스트 구분##
 GUI_category()
+
+print(score)
